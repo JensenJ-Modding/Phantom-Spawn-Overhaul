@@ -18,7 +18,7 @@ public class PhantomSpawnOverhaul {
 
     public static final int INSOMNIA_COLOUR = 4378923;
 
-    public static final RegistrySupplier<Item> INSOMNIA_POTION = ITEMS.register(
+    public static final RegistrySupplier<Item> INSOMNIA_BOTTLE = ITEMS.register(
             "insomnia_bottle",
             () -> new InsomniaBottle(
                     new Item.Properties().food(Foods.OMINOUS_BOTTLE).arch$tab(CreativeModeTabs.FOOD_AND_DRINKS)));
