@@ -1,26 +1,26 @@
 {
   "schemaVersion": 1,
-  "id": "architecturymod",
+  "id": "phantomspawnoverhaul",
   "version": "${version}",
-  "name": "Architectury Mod",
-  "description": "Mod Description",
+  "name": "Phantom Spawn Overhaul",
+  "description": "A simple Minecraft mod which will provide an alternative path for phantoms to spawn. Allows phantoms to spawn on a player by using a potion of Insomnia.",
   "authors": [
     "JensenJ - Developer"
   ],
   "contact": {
-    "sources": "https://github.com/JensenJ-Modding/Architectury-Template",
-    "issues": "https://github.com/JensenJ-Modding/Architectury-Template/issues"
+    "sources": "https://github.com/JensenJ-Modding/Phantom-Spawn-Overhaul",
+    "issues": "https://github.com/JensenJ-Modding/Phantom-Spawn-Overhaul/issues"
   },
   "license": "MIT License",
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.architecturymod.fabric.ArchitecturyModFabric"
+      "net.phantomspawnoverhaul.fabric.PhantomSpawnOverhaulFabric"
     ]
   },
   "mixins": [
-    "architecturymod-common.mixins.json",
-    "architecturymod-fabric.mixins.json"
+    "phantomspawnoverhaul-common.mixins.json",
+    "phantomspawnoverhaul-fabric.mixins.json"
   ],
   "depends": {
     "fabric": "*",

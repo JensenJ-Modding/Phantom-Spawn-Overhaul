@@ -1,32 +1,32 @@
 modLoader = "javafml"
 loaderVersion = "[4,)"
-issueTrackerURL = "https://github.com/JensenJ-Modding/Architectury-Template/issues"
+issueTrackerURL = "https://github.com/JensenJ-Modding/Phanton-Spawn-Overhaul/issues"
 license = "MIT License"
 
 [[mods]]
-modId = "architecturymod"
+modId = "phantomspawnoverhaul"
 version = "${version}"
-displayName = "Architectury Mod"
+displayName = "Phantom Spawn Overhaul"
 authors = "JensenJ - Developer"
 description = '''
-Mod Description
+A simple Minecraft mod which will provide an alternative path for phantoms to spawn. Allows phantoms to spawn on a player by using a potion of Insomnia.
 '''
 
-[[dependencies.architecturymod]]
+[[dependencies.phantomspawnoverhaul]]
 modId = "neoforge"
 type = "required"
 versionRange = "[21.1,)"
 ordering = "NONE"
 side = "BOTH"
 
-[[dependencies.architecturymod]]
+[[dependencies.phantomspawnoverhaul]]
 modId = "minecraft"
 type = "required"
 versionRange = "[1.21.1,)"
 ordering = "NONE"
 side = "BOTH"
 
-[[dependencies.architecturymod]]
+[[dependencies.phantomspawnoverhaul]]
 modId = "architectury"
 type = "required"
 versionRange = "[13.0.8,)"
@@ -34,7 +34,7 @@ ordering = "AFTER"
 side = "BOTH"
 
 [[mixins]]
-config = "architecturymod-neoforge.mixins.json"
+config = "phantomspawnoverhaul-neoforge.mixins.json"
 
 [[mixins]]
-config = "architecturymod-common.mixins.json"
+config = "phantomspawnoverhaul-common.mixins.json"
