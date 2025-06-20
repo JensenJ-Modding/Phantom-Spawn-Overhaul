@@ -2,6 +2,7 @@ package net.phantomspawnoverhaul;
 
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.food.Foods;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
 
 import dev.architectury.registry.registries.DeferredRegister;
@@ -18,7 +19,9 @@ public class PhantomSpawnOverhaul {
     public static final int INSOMNIA_COLOUR = 4378923;
 
     public static final RegistrySupplier<Item> INSOMNIA_POTION = ITEMS.register(
-            "insomnia_bottle", () -> new InsomniaBottle(new Item.Properties().food(Foods.OMINOUS_BOTTLE)));
+            "insomnia_bottle",
+            () -> new InsomniaBottle(
+                    new Item.Properties().food(Foods.OMINOUS_BOTTLE).arch$tab(CreativeModeTabs.FOOD_AND_DRINKS)));
 
     public static void init() {
         ITEMS.register();
