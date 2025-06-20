@@ -17,6 +17,7 @@ import net.minecraft.world.item.*;
 import net.minecraft.world.item.alchemy.PotionContents;
 import net.minecraft.world.level.Level;
 
+import dev.architectury.injectables.annotations.ExpectPlatform;
 import org.jetbrains.annotations.NotNull;
 
 public class InsomniaBottle extends Item {
@@ -39,7 +40,7 @@ public class InsomniaBottle extends Item {
                     livingEntity.getSoundSource(),
                     1.0F,
                     1.0F);
-            livingEntity.addEffect(new MobEffectInstance(PhantomSpawnOverhaul.INSOMNIA, 120000, 0, false, false, true));
+            livingEntity.addEffect(getInsomniaEffect());
         }
 
         itemStack.consume(1, livingEntity);
@@ -62,9 +63,13 @@ public class InsomniaBottle extends Item {
     public void appendHoverText(
             ItemStack itemStack, Item.TooltipContext tooltipContext, List<Component> list, TooltipFlag tooltipFlag) {
         super.appendHoverText(itemStack, tooltipContext, list, tooltipFlag);
-        List<MobEffectInstance> list2 =
-                List.of(new MobEffectInstance(PhantomSpawnOverhaul.INSOMNIA, 120000, 0, false, false, true));
+        List<MobEffectInstance> list2 = List.of(getInsomniaEffect());
         Objects.requireNonNull(list);
         PotionContents.addPotionTooltip(list2, list::add, 1.0F, tooltipContext.tickRate());
+    }
+
+    @ExpectPlatform
+    private static MobEffectInstance getInsomniaEffect() {
+        throw new AssertionError("Not implemented for this modloader");
     }
 }

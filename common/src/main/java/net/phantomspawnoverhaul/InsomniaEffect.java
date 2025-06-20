@@ -18,7 +18,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.FluidState;
 
 public class InsomniaEffect extends MobEffect {
-    protected InsomniaEffect(MobEffectCategory mobEffectCategory, int i) {
+    public InsomniaEffect(MobEffectCategory mobEffectCategory, int i) {
         super(mobEffectCategory, i);
     }
 
