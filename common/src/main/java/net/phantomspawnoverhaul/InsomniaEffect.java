@@ -58,7 +58,6 @@ public class InsomniaEffect extends MobEffect {
         }
 
         // Spawn phantoms - This logic is taken directly from PhantomSpawner
-        PhantomSpawnOverhaul.LOGGER.info(serverLevel.dayTime());
         RandomSource randomSource = serverLevel.random;
         DifficultyInstance difficultyInstance = serverLevel.getCurrentDifficultyAt(blockPos);
         BlockPos blockPos2 = blockPos.above(20 + randomSource.nextInt(15))
